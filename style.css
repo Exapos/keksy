@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+     background-image: url("https://as2.ftcdn.net/v2/jpg/02/92/30/91/1000_F_292309140_YIKAavpf8Cggz7b5jYlmtSPyhx2F0E3O.jpg");
+}
+
+
+.table{
+    background-color: lightgray;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 20px 0;
+    text-align: center;
+    border: solid 1px black;
+    font-weight: 200;
+    font-size: 60px;
+
+    margin: 20px auto;
+    width: 50%;
+}
+
+
+
+#pridatSarince:hover {
+    border: none;
+    background:blue;
+    box-shadow: 0px 0px 1px #777;
+}
+
+#pridatExaposovi:hover {
+    border: none;
+    background:blue;
+    box-shadow: 0px 0px 1px #777;
+}
+
+@media screen and (max-width: 768px){
+
+
+}
