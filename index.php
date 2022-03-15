@@ -20,11 +20,17 @@ try {
         $contentE = fgets($fileExapos);
         fclose($fileExapos);
 
+        $timestampE = trim(file_get_contents('./source/exaposTime.txt'));
+//////////////////////////////////////////////////////////////////////////////////////////////
+        $timestampS = trim(file_get_contents('./source/saraTime.txt'));
         $fileSara = fopen("source/sara.txt", "r+");   
         $contentS = fgets($fileSara);
         fclose($fileSara);
 
         if (isset($_POST["btn-exa"])){
+            $time = time();
+            $timestampE = date('d m Y  @ H:i:s', $time);
+            file_put_contents("./source/exaposTime.txt", $timestampE);
             $contentE = trim(file_get_contents('./source/exapos.txt'));
             $contentE = $contentE + 1;
             file_put_contents("./source/exapos.txt", $contentE);
@@ -32,6 +38,9 @@ try {
         }
 
         if (isset($_POST["btn-sar"])){
+            $time = time();
+            $timestampS = date('d m Y  @ H:i:s', $time);
+            file_put_contents("./source/saraTime.txt", $timestampS);
             $contentS = trim(file_get_contents('./source/sara.txt'));
             $contentS = $contentS + 1;
             file_put_contents("./source/sara.txt", $contentS);
@@ -62,6 +71,10 @@ catch (exception $e) {
                 <input type="submit" name="btn-exa" value="Přidat Exaposovi" class="btn btn-success">
 
                 </form>
+            </div>
+            <div class="timestamp">
+                <span class="saraT">Poslední keksík sarince byl poslán: <?php echo $timestampE;?></span><br>
+                <span class="exaposT">Poslední keksík keksapovovi byl poslán: <?php echo $timestampS;?></span>
             </div>
         </div>
     </div>

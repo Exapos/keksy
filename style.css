@@ -20,6 +20,18 @@ body{
     margin: 20px auto;
     width: 50%;
 }
+.timestamp{
+    background-color: lightgray;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 20px 0;
+    text-align: center;
+    border: solid 1px black;
+    font-weight: 200;
+    font-size: 12px;
+    margin: 20px auto;
+    width: 50%;
+}
 
 #pridatSarince:hover {
     border: none;
